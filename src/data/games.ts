@@ -3685,7 +3685,7 @@ export const GAMES: Game[] = [
   {
     id: 'dragon-ball-xenoverse-2',
     title: "Dragon Ball Xenoverse 2",
-    cover: '',
+    cover: 'https://howlongtobeat.com/games/40860_Dragon_Ball_Xenoverse_2.jpg?width=250',
     releaseDate: '2016-01-01',
     status: 'jogando',
     hoursPlayed: 0,
