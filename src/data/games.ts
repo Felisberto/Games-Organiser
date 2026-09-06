@@ -3691,7 +3691,7 @@ export const GAMES: Game[] = [
     hoursPlayed: 3,
     studio: "Starbreeze Studios",
     studioAvatar: 'https://upload.wikimedia.org/wikipedia/en/d/db/Starbreeze_Studios.svg',
-    genres: ["Third-Person", "Aventura"],
+    genres: ["Third-Person", "Aventura", "Atmospheric", "Indie"],
     startDate: '2026-09-02',
     endDate: '2026-09-04',
     rating: 10,
