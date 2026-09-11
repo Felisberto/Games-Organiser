@@ -217,10 +217,10 @@ function SingleYearChart({ data, mode }: { data: YearStat; mode: ViewMode }) {
       <div className="flex flex-col items-center justify-center py-12 text-center">
         <TrendingUp className="mb-2 h-8 w-8 text-gray-600" />
         <p className="text-sm font-semibold text-gray-500">
-          Nenhum jogo registrado em {data.year}.
+          Ainda não há jogos registrados em {data.year}.
         </p>
         <p className="mt-0.5 text-xs text-gray-600">
-          Tente selecionar outro ano ou "Todos os Anos".
+          Experimente selecionar outro ano ou visualizar tudo de uma vez.
         </p>
       </div>
     );

@@ -86,7 +86,7 @@ export function FilterBar(props: FilterBarProps) {
               type="text"
               value={search}
               onChange={(e) => onSearch(e.target.value)}
-              placeholder="Buscar por título…"
+              placeholder="Buscar por título..."
               className="w-full rounded-xl border border-line bg-ink-700/80 py-2.5 pl-9 pr-9 text-sm font-medium text-white placeholder-gray-500 transition-colors hover:border-gray-600 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40"
             />
             {search && (
@@ -113,7 +113,7 @@ export function FilterBar(props: FilterBarProps) {
 
             <div className="relative">
               <select className={selectClass} value={genre} onChange={(e) => onGenre(e.target.value)}>
-                <option value="all">Todos os Gêneros</option>
+                <option value="all">Qualquer gênero</option>
                 {genres.map((g) => (
                   <option key={g} value={g}>{g}</option>
                 ))}

@@ -22,7 +22,7 @@ export function TopGames({ games }: TopGamesProps) {
             Top 10 Pessoal
           </h2>
           <p className="text-xs font-medium text-gray-500">
-            escolha manual — não depende da nota
+            Minha seleção pessoal, independente da nota.
           </p>
         </div>
       </div>
@@ -99,7 +99,7 @@ function TopGameRow({ game, rank }: { game: Game; rank: number }) {
             {game.rating.toFixed(1)}
           </span>
         ) : (
-          <span className="text-xs font-medium text-gray-600">sem nota</span>
+          <span className="text-xs font-medium text-gray-600">sem avaliação</span>
         )}
       </div>
 

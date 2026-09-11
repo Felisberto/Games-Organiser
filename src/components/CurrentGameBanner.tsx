@@ -40,7 +40,7 @@ export function CurrentGameBanner({ game }: CurrentGameBannerProps) {
           <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
             <span className="flex items-center gap-1.5 text-xs font-semibold text-gray-300">
               <Clock className="h-3.5 w-3.5 text-emerald-400" strokeWidth={2.2} />
-              {formatPlayTime(game.hoursPlayed, game.playMinutes ?? 0, game.playSeconds ?? 0)} jogadas
+              {formatPlayTime(game.hoursPlayed, game.playMinutes ?? 0, game.playSeconds ?? 0)} de jogo
             </span>
             {game.rating > 0 && (
               <span className="flex items-center gap-1.5">
