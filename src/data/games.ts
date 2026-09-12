@@ -130,6 +130,24 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'a-lenda-do-heroi',
+    title: "A Lenda do Heroi",
+    cover: '',
+    releaseDate: '2020-04-31',
+    status: 'jogando',
+    hoursPlayed: 0,
+    studio: "Dumativa Game Studio",
+    studioAvatar: '',
+    genres: ["2D Platformer", "Aventura", "Indie", "Soundtrack"],
+    startDate: '2026-09-12',
+    endDate: null,
+    rating: 15,
+    difficulty: '',
+    platforms: [{ name: 'Steam', icon: 'steam', url: '' }, { name: 'Xbox', icon: 'xbox', url: '' }, { name: 'PlayStation', icon: 'playstation', url: '' }, { name: 'Nintendo', icon: 'nintendo', url: '' }],
+    playedOn: ["PC"],
+    recomendadoPor: "@IranDubs",
+  },
+  {
     id: 'fable-the-lost-chapters',
     title: "Fable: The Lost Chapters",
     cover: '',
