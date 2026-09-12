@@ -3681,6 +3681,7 @@ export const GAMES: Game[] = [
     startDate: '2026-09-06',
     endDate: '2026-09-12',
     rating: 9,
+    difficulty: 'medio',
     platforms: [{ name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/454650/DRAGON_BALL_XENOVERSE_2/' }, { name: 'Xbox', icon: 'xbox', url: 'https://www.xbox.com/pt-BR/games/store/dragon-ball-xenoverse-2/bx03760d0qgn' }, { name: 'PlayStation', icon: 'playstation', url: 'https://www.playstation.com/pt-br/games/dragon-ball-xenoverse-2/' }, { name: 'Nintendo', icon: 'nintendo', url: 'https://www.nintendo.com/pt-br/store/products/dragon-ball-xenoverse-2-for-nintendo-switch-switch/' }],
     playedOn: ["PC"],
     recomendadoPor: "felis",
