@@ -139,7 +139,7 @@ export const GAMES: Game[] = [
     studio: "Dumativa Game Studio",
     studioAvatar: 'https://media.licdn.com/dms/image/v2/C4D0BAQFHUETElp0GcA/company-logo_200_200/company-logo_200_200/0/1660150592693/dumativa_logo?e=2147483647&v=beta&t=_3B294nX3AERlSv2dVbZ9nuLG6YqsnxlFDCIKxWS3bI',
     genres: ["2D Platformer", "Aventura", "Indie", "Soundtrack"],
-    startDate: '2026-09-12',
+    startDate: '2026-09-13',
     endDate: null,
     rating: null,
     difficulty: '',
