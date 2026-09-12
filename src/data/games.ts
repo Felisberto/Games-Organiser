@@ -141,7 +141,7 @@ export const GAMES: Game[] = [
     genres: ["2D Platformer", "Aventura", "Indie", "Soundtrack"],
     startDate: '2026-09-12',
     endDate: null,
-    rating: 15,
+    rating: null,
     difficulty: '',
     platforms: [{ name: 'Steam', icon: 'steam', url: '' }, { name: 'Xbox', icon: 'xbox', url: '' }, { name: 'PlayStation', icon: 'playstation', url: '' }, { name: 'Nintendo', icon: 'nintendo', url: '' }],
     playedOn: ["PC"],
