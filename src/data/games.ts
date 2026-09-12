@@ -3671,7 +3671,7 @@ export const GAMES: Game[] = [
     title: "Dragon Ball Xenoverse 2",
     cover: 'https://howlongtobeat.com/games/40860_Dragon_Ball_Xenoverse_2.jpg?width=250',
     releaseDate: '2016-10-29',
-    status: 'jogando',
+    status: 'finalizado',
     hoursPlayed: 11,
     playMinutes: 40,
     playSeconds: 10,
