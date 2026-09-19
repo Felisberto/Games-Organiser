@@ -130,6 +130,24 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'far-cry-4',
+    title: "Far Cry 4",
+    cover: 'https://howlongtobeat.com/games/19310_Far_Cry_4.jpg?width=250',
+    releaseDate: '2014-11-19',
+    status: 'jogando',
+    hoursPlayed: 0,
+    studio: "Ubisoft",
+    studioAvatar: 'https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg',
+    genres: ["Primeira Pessoa", "Aventura", "Shooter", "Mundo Aberto"],
+    startDate: '2026-09-20',
+    endDate: '',
+    rating: null,
+    difficulty: 'medio',
+    platforms: [{ name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/298110/Far_Cry_4/' }, { name: 'Xbox', icon: 'xbox', url: 'https://www.xbox.com/pt-BR/games/store/far-cry-4/c0kj40t9qd86' }, { name: 'PlayStation', icon: 'playstation', url: 'https://www.playstation.com/pt-br/games/far-cry-4/' }],
+    playedOn: ["PC"],
+    recomendadoPor: "felis",
+  },
+  {
     id: 'a-lenda-do-heroi',
     title: "A Lenda do Heroi",
     cover: 'https://howlongtobeat.com/games/36287_A_Lenda_do_Heroi.jpg?width=250',
