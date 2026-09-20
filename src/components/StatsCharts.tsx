@@ -78,8 +78,8 @@ export function StatsCharts({ games }: StatsChartsProps) {
       {/* Jogo mais longo */}
       <ChartCard
         icon={<Clock className="h-4 w-4 text-rose-400" strokeWidth={2.2} />}
-        title="Maratonas da coleção"
-        subtitle="os 5 jogos que mais consumiram meu tempo"
+        title="Mais Tempo de Jogo"
+        subtitle="os 5 títulos com mais horas registradas"
       >
         {longest.length === 0 ? (
           <EmptyState text="Nenhum tempo registrado ainda." />
@@ -91,8 +91,8 @@ export function StatsCharts({ games }: StatsChartsProps) {
       {/* Jogo mais curto */}
       <ChartCard
         icon={<Clock className="h-4 w-4 text-teal-400" strokeWidth={2.2} />}
-        title="Experiências rápidas"
-        subtitle="os 5 jogos mais curtos que passei"
+        title="Menos Tempo de Jogo"
+        subtitle="os 5 títulos com menos horas registradas"
       >
         {shortest.length === 0 ? (
           <EmptyState text="Nenhum tempo registrado ainda." />
