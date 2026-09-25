@@ -136,7 +136,7 @@ export const GAMES: Game[] = [
     releaseDate: '2014-11-19',
     status: 'jogando',
     hoursPlayed: 1,
-    playMinutes: 07,
+    playMinutes: 7,
     studio: "Ubisoft",
     studioAvatar: 'https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg',
     genres: ["Primeira Pessoa", "Aventura", "Shooter", "Mundo Aberto"],
