@@ -144,7 +144,7 @@ export const GAMES: Game[] = [
     rating: 0,
     difficulty: 'medio',
     platforms: [],
-    playedOn: ["PC"],
+    playedOn: ["PS2"],
     recomendadoPor: "felis",
   },
   {
