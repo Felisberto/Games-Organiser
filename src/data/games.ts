@@ -130,6 +130,24 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'jurassic-park-operation-genesis',
+    title: "Jurassic Park: Operation Genesis",
+    cover: 'https://howlongtobeat.com/games/4899_Jurassic_Park_Operation_Genesis.png?width=250',
+    releaseDate: '2003-03-13',
+    status: 'jogando',
+    hoursPlayed: 0,
+    studio: "Blue Tongue Entertainment",
+    studioAvatar: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Blue_Tongue_Entertainment_logo.svg',
+    genres: ["Simulação", "Estratégia", "Point and Click", "Real-Time"],
+    startDate: '2026-09-30',
+    endDate: '',
+    rating: 0,
+    difficulty: 'medio',
+    platforms: [{}],
+    playedOn: ["PS2"],
+    recomendadoPor: 'felis',
+  },
+  {
     id: 'far-cry-4',
     title: "Far Cry 4",
     cover: 'https://howlongtobeat.com/games/19310_Far_Cry_4.jpg?width=250',
