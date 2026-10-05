@@ -130,6 +130,24 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'jurassic-world-evolution',
+    title: "Jurassic World: Evolution",
+    cover: 'https://howlongtobeat.com/games/57068_Jurassic_World_Evolution.jpg?width=250',
+    releaseDate: '2018-06-13',
+    status: 'visitado',
+    hoursPlayed: 2,
+    studio: "Frontier Developments",
+    studioAvatar: 'https://upload.wikimedia.org/wikipedia/en/e/e7/Frontier_Developments.svg',
+    genres: ["Simulation", "Estratégia", "Point and Click", "Real-Time"],
+    startDate: '2026-10-04',
+    endDate: '2026-10-04',
+    rating: 10,
+    difficulty: 'medio',
+    platforms: [{ name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/648350/Jurassic_World_Evolution/'}, { name: 'Xbox', icon: 'xbox', url: 'https://www.xbox.com/pt-BR/games/store/jurassic-world-evolution/c1ld4244xcnj' }, { name: 'PlayStation', icon: 'playstation', url: 'https://store.playstation.com/pt-br/product/UP2514-CUSA10205_00-JWEVOLUTION00000' }, { name: 'Nintendo', icon: 'nintendo', url: 'https://www.nintendo.com/us/store/products/jurassic-world-evolution-complete-edition-switch/' }],
+    playedOn: ["PC"],
+    recomendadoPor: "felis",
+  },
+  {
     id: 'jurassic-park-operation-genesis',
     title: "Jurassic Park: Operation Genesis",
     cover: 'https://howlongtobeat.com/games/4899_Jurassic_Park_Operation_Genesis.png?width=250',
