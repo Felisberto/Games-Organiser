@@ -130,6 +130,24 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'portal',
+    title: "Portal",
+    cover: 'https://howlongtobeat.com/games/256px-Portal_standalonebox.jpg?width=250',
+    releaseDate: '2007-10-10',
+    status: 'finalizado',
+    hoursPlayed: 2,
+    studio: "Valve",
+    studioAvatar: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Valve_logo.svg',
+    genres: ["Primeira Pessoa", "Puzzle", "Platform", "Boa Trama"],
+    startDate: '2026-10-17',
+    endDate: '2026-10-17',
+    rating: 15,
+    difficulty: 'dificil',
+    platforms: [{ name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/400/Portal/'}],
+    playedOn: ["PC"],
+    recomendadoPor: "felis",
+  },
+  {
     id: 'jurassic-world-evolution',
     title: "Jurassic World: Evolution",
     cover: 'https://howlongtobeat.com/games/57068_Jurassic_World_Evolution.jpg?width=250',
