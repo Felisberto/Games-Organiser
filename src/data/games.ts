@@ -130,6 +130,25 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'a-story-about-my-uncle',
+    title: "A Story About My Uncle",
+    cover: 'https://howlongtobeat.com/games/AStoryAboutMyUncle.jpg?width=250',
+    releaseDate: '2014-03-29',
+    status: 'finalizado',
+    hoursPlayed: 1,
+    playMinutes: 54,
+    studio: "Gone North Games",
+    studioAvatar: 'https://yt3.googleusercontent.com/ytc/AIdro_nQKcPX1P6IJljBfZKp4bca3NROWOEZZHDarjpcVTEOpA=s120-c-k-c0x00ffffff-no-rj',
+    genres: ["Primeira Pessoa", "Adventura", "Plataforma", "Boa Trama"],
+    startDate: '2026-10-22',
+    endDate: '2026-10-22',
+    rating: 10,
+    difficulty: 'facil',
+    platforms: [{ name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/278360/A_Story_About_My_Uncle/'}],
+    playedOn: ["PC"],
+    recomendadoPor: "felis",
+  },
+  {
     id: 'portal',
     title: "Portal",
     cover: 'https://howlongtobeat.com/games/256px-Portal_standalonebox.jpg?width=250',
