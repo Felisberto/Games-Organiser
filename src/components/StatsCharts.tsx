@@ -30,11 +30,11 @@ export function StatsCharts({ games }: StatsChartsProps) {
       {/* Quem mais recomendou */}
       <ChartCard
         icon={<Users className="h-4 w-4 text-sky-400" strokeWidth={2.2} />}
-        title="Quem me indicou mais jogos"
-        subtitle="quem mais me apresentou títulos novos"
+        title="Quem Mais Recomendou"
+        subtitle="pessoas que indicaram jogos (sem contar você)"
       >
         {recommenders.length === 0 ? (
-          <EmptyState text="Ainda sem indicações de outras pessoas." />
+          <EmptyState text="Nenhuma recomendação externa ainda." />
         ) : (
           <RankingList items={recommenders} colorHex="#38bdf8" />
         )}
@@ -43,11 +43,11 @@ export function StatsCharts({ games }: StatsChartsProps) {
       {/* Empresas mais jogadas */}
       <ChartCard
         icon={<Building2 className="h-4 w-4 text-violet-400" strokeWidth={2.2} />}
-        title="Estúdios favoritos"
-        subtitle="ordenado por horas jogadas"
+        title="Empresas Mais Jogadas"
+        subtitle="quantidade de jogos por desenvolvedora"
       >
         {studios.length === 0 ? (
-          <EmptyState text="Nenhum jogo por aqui ainda." />
+          <EmptyState text="Nenhum jogo registrado." />
         ) : (
           <RankingList items={studios} colorHex="#a78bfa" />
         )}
@@ -56,11 +56,11 @@ export function StatsCharts({ games }: StatsChartsProps) {
       {/* Gêneros mais jogados */}
       <ChartCard
         icon={<Gamepad2 className="h-4 w-4 text-emerald-400" strokeWidth={2.2} />}
-        title="Gêneros preferidos"
-        subtitle="os estilos que mais aparecem na coleção"
+        title="Gêneros Mais Jogados"
+        subtitle="quantidade de jogos por estilo"
       >
         {genres.length === 0 ? (
-          <EmptyState text="Nenhum gênero cadastrado ainda." />
+          <EmptyState text="Nenhum gênero registrado." />
         ) : (
           <RankingList items={genres} colorHex="#34d399" />
         )}
@@ -69,8 +69,8 @@ export function StatsCharts({ games }: StatsChartsProps) {
       {/* Distribuição de dificuldade */}
       <ChartCard
         icon={<Gauge className="h-4 w-4 text-amber-400" strokeWidth={2.2} />}
-        title="Nível de Dificuldade"
-        subtitle="como os jogos se distribuem por dificuldade"
+        title="Distribuição de Dificuldade"
+        subtitle="quantos jogos em cada nível"
       >
         <DifficultyBarChart stats={difficulty} />
       </ChartCard>
@@ -78,11 +78,11 @@ export function StatsCharts({ games }: StatsChartsProps) {
       {/* Jogo mais longo */}
       <ChartCard
         icon={<Clock className="h-4 w-4 text-rose-400" strokeWidth={2.2} />}
-        title="Mais Tempo de Jogo"
-        subtitle="os 5 títulos com mais horas registradas"
+        title="Jogos Mais Longos"
+        subtitle="top 5 com mais horas jogadas"
       >
         {longest.length === 0 ? (
-          <EmptyState text="Nenhum tempo registrado ainda." />
+          <EmptyState text="Nenhuma hora registrada." />
         ) : (
           <HoursGameList games={longest} />
         )}
@@ -91,11 +91,11 @@ export function StatsCharts({ games }: StatsChartsProps) {
       {/* Jogo mais curto */}
       <ChartCard
         icon={<Clock className="h-4 w-4 text-teal-400" strokeWidth={2.2} />}
-        title="Menos Tempo de Jogo"
-        subtitle="os 5 títulos com menos horas registradas"
+        title="Jogos Mais Curtos"
+        subtitle="top 5 com menos horas jogadas"
       >
         {shortest.length === 0 ? (
-          <EmptyState text="Nenhum tempo registrado ainda." />
+          <EmptyState text="Nenhuma hora registrada." />
         ) : (
           <HoursGameList games={shortest} />
         )}
@@ -191,7 +191,7 @@ function DifficultyBarChart({
   const total = stats.reduce((sum, s) => sum + s.count, 0);
 
   if (total === 0) {
-    return <EmptyState text="Nenhum jogo com dificuldade definida ainda." />;
+    return <EmptyState text="Nenhuma dificuldade registrada." />;
   }
 
   return (

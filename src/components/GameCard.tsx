@@ -2,7 +2,8 @@ import { Calendar, Clock, Flag, Gamepad2, User, FlaskConical } from 'lucide-reac
 import type { Game } from '../data/games';
 import { formatDate, formatPlayTime } from '../lib/gameUtils';
 import { GameCover } from './GameCover';
-import { StudioAvatar } from './StudioAvatar';
+import { StudioCredit } from './StudioCredit';
+import { findStudio } from '../data/studios';
 import { StatusBadge } from './StatusBadge';
 import { Rating } from './Rating';
 import { PlatformLinks } from './PlatformLinks';
@@ -23,21 +24,21 @@ export function GameCard({ game, index }: GameCardProps) {
     if (isActive && !game.endDate) {
       return (
         <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-emerald-300">
-          Jogando agora
+          Em Andamento
         </span>
       );
     }
     if (game.status === 'adiado') {
       return (
         <span className="inline-flex items-center gap-1 rounded-md bg-rose-500/10 px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-rose-300">
-          Em pausa
+          Pausado
         </span>
       );
     }
     if (game.status === 'estocado' && notStarted) {
       return (
         <span className="inline-flex items-center gap-1 rounded-md bg-amber-500/10 px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-amber-300">
-          Ainda não comecei
+          Não começou
         </span>
       );
     }
@@ -97,7 +98,7 @@ export function GameCard({ game, index }: GameCardProps) {
               </span>
             </div>
             <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-600">
-              Tempo de Jogo
+              Tempo Jogado
             </p>
             <StatusBadge status={game.status} />
           </div>
@@ -106,17 +107,20 @@ export function GameCard({ game, index }: GameCardProps) {
         {/* DIVIDER */}
         <div className="my-4 h-px w-full bg-gradient-to-r from-line via-line/60 to-transparent" />
 
-        {/* MIDDLE: studio */}
+        {/* MIDDLE: studios */}
         <div className="flex items-center gap-3">
-          <StudioAvatar src={game.studioAvatar} name={game.studio} size={40} />
           <div className="min-w-0">
             <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-600">
-              Desenvolvido por
+              Desenvolvedora
             </p>
-            <p className="truncate text-sm font-bold text-gray-200">{game.studio}</p>
+            <div className="mt-1.5 flex flex-wrap items-center gap-x-5 gap-y-2">
+              {game.studio.split(', ').map((name) => (
+                <StudioCredit key={name} name={name} studio={findStudio(name)} />
+              ))}
+            </div>
           </div>
           <div className="ml-auto flex items-center gap-1.5">
-            {game.genres.slice(0, 6).map((g) => (
+            {game.genres.slice(0, 2).map((g) => (
               <span
                 key={g}
                 className="inline-flex items-center gap-1 rounded-md border border-line bg-ink-700/60 px-2 py-0.5 text-[11px] font-semibold text-gray-400"
@@ -145,7 +149,7 @@ export function GameCard({ game, index }: GameCardProps) {
                 className={`h-3.5 w-3.5 ${game.recomendadoPor.toLowerCase() === 'felis' ? 'text-amber-300' : 'text-sky-300'}`}
                 strokeWidth={2.5}
               />
-              <span className="text-xs font-semibold text-gray-400">Indicado por</span>
+              <span className="text-xs font-semibold text-gray-400">Recomendado por</span>
               <span
                 className={`text-sm font-extrabold ${
                   game.recomendadoPor.toLowerCase() === 'felis' ? 'text-amber-200' : 'text-sky-200'
@@ -161,7 +165,7 @@ export function GameCard({ game, index }: GameCardProps) {
         {game.playedOn.length > 0 && (
           <div className="mt-3 flex flex-wrap items-center gap-1.5">
             <span className="flex items-center gap-1 text-[11px] font-semibold text-gray-500">
-              <Gamepad2 className="h-3 w-3 text-gray-600" strokeWidth={2.5} /> Joguei no:
+              <Gamepad2 className="h-3 w-3 text-gray-600" strokeWidth={2.5} /> Jogado:
             </span>
             {game.playedOn.map((console) => (
               <span
@@ -178,11 +182,11 @@ export function GameCard({ game, index }: GameCardProps) {
         <div className="mt-auto flex flex-col gap-3 pt-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="mb-1.5 flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-gray-600">
-              <Flag className="h-3 w-3" strokeWidth={2.5} /> Período jogado
+              <Flag className="h-3 w-3" strokeWidth={2.5} /> Sessões
             </p>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
               <span className="font-semibold text-gray-300">
-                {game.startDate ? formatDate(game.startDate) : 'Ainda não comecei'}
+                {game.startDate ? formatDate(game.startDate) : 'Não começou'}
               </span>
               <span className="text-gray-600">→</span>
               {renderEndState()}
@@ -192,7 +196,7 @@ export function GameCard({ game, index }: GameCardProps) {
           <div className="flex flex-col items-start gap-2 sm:items-end">
             <div className="text-left sm:text-right">
               <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-widest text-gray-600">
-                Minha Avaliação
+                Minha Nota
               </p>
               <Rating rating={game.rating} />
             </div>
