@@ -130,6 +130,25 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'portal-2',
+    title: "Portal 2",
+    cover: 'https://howlongtobeat.com/games/Portal2cover.jpg?width=250',
+    releaseDate: '2011-04-19',
+    status: 'jogando',
+    hoursPlayed: 1,
+    playMinutes: 35,
+    studio: "Valve",
+    studioAvatar: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Valve_logo.svg',
+    genres: ["Primeira Pessoa", "Puzzle", "Platform", "Boa Trama"],
+    startDate: '2026-11-14',
+    endDate: ,
+    rating: ,
+    difficulty: 'medio',
+    platforms: [{ name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/620/Portal_2/' }, { name: 'Xbox', icon: 'xbox', url: 'https://www.xbox.com/pt-BR/games/store/portal-2/bt2b17v20d1p' }, {name: 'Nintendo', icon: 'nintendo', url: 'https://www.nintendo.com/us/store/products/portal-2-switch/' }],
+    playedOn: ["PC"],
+    recomendadoPor: "felis",
+  },
+  {
     id: 'a-story-about-my-uncle',
     title: "A Story About My Uncle",
     cover: 'https://howlongtobeat.com/games/AStoryAboutMyUncle.jpg?width=250',
