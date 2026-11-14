@@ -175,7 +175,7 @@ export const GAMES: Game[] = [
     status: 'finalizado',
     hoursPlayed: 2,
     studio: "Valve",
-    studioAvatar: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Valve_logo.svg',
+    studioAvatar: 'https://avatars.fastly.steamstatic.com/7ba781b5f0b8a99d4cc0b0b0dcaa22df73db7db2_full.jpg',
     genres: ["Primeira Pessoa", "Puzzle", "Platform", "Boa Trama"],
     startDate: '2026-10-17',
     endDate: '2026-10-17',
