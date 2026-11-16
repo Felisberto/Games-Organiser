@@ -19,6 +19,14 @@ export const STATUS_INFO: Record<
     icon: 'emerald',
     hex: '#34d399',
   },
+  jogaremos: {
+    label: 'Jogaremos',
+    short: 'Jogaremos',
+    color: 'text-cyan-300',
+    chip: 'bg-cyan-500/15 border-cyan-400/30 text-cyan-300',
+    icon: 'cyan',
+    hex: '#22d3ee',
+  },
   finalizado: {
     label: 'Finalizado',
     short: 'Finalizado',
@@ -53,7 +61,7 @@ export const STATUS_INFO: Record<
   },
 };
 
-export const STATUS_ORDER: GameStatus[] = ['jogando', 'finalizado', 'visitado', 'estocado', 'adiado'];
+export const STATUS_ORDER: GameStatus[] = ['jogando', 'jogaremos', 'finalizado', 'visitado', 'estocado', 'adiado'];
 
 export const STATUS_OPTIONS = [
   { value: 'all', label: 'Todos os Status' },

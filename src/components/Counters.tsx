@@ -1,9 +1,10 @@
-import { Library, PlayCircle, CheckCircle2, Eye, Archive, Clock3 } from 'lucide-react';
+import { Library, PlayCircle, CalendarClock, CheckCircle2, Eye, Archive, Clock3 } from 'lucide-react';
 import type { GameCounts } from '../lib/gameUtils';
 import { STATUS_INFO, STATUS_ORDER } from '../lib/statusStyles';
 
 const ICONS = {
   jogando: PlayCircle,
+  jogaremos: CalendarClock,
   finalizado: CheckCircle2,
   visitado: Eye,
   estocado: Archive,
@@ -12,6 +13,7 @@ const ICONS = {
 
 const DOT_CLASSES: Record<string, string> = {
   jogando: 'bg-emerald-400',
+  jogaremos: 'bg-cyan-400',
   finalizado: 'bg-sky-400',
   visitado: 'bg-violet-400',
   estocado: 'bg-amber-400',

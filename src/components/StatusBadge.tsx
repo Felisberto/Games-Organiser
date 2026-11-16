@@ -1,9 +1,10 @@
-import { PlayCircle, CheckCircle2, Eye, Archive, Clock3 } from 'lucide-react';
+import { PlayCircle, CalendarClock, CheckCircle2, Eye, Archive, Clock3 } from 'lucide-react';
 import type { GameStatus } from '../data/games';
 import { STATUS_INFO } from '../lib/statusStyles';
 
 const ICONS: Record<GameStatus, typeof PlayCircle> = {
   jogando: PlayCircle,
+  jogaremos: CalendarClock,
   finalizado: CheckCircle2,
   visitado: Eye,
   estocado: Archive,

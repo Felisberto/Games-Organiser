@@ -4,7 +4,7 @@ import type { Game } from '../data/games';
 import { computeYearlyStats, getGameYear, type YearStat } from '../lib/gameUtils';
 import { STATUS_INFO, STATUS_ORDER } from '../lib/statusStyles';
 
-const CHART_STATUSES = STATUS_ORDER.filter((s) => s !== 'jogando');
+const CHART_STATUSES = STATUS_ORDER.filter((s) => s !== 'jogando' && s !== 'jogaremos');
 import { StatsCharts } from './StatsCharts';
 
 interface StatsPanelProps {

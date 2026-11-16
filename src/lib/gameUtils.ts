@@ -98,6 +98,7 @@ export function filterAndSort(
 export interface GameCounts {
   total: number;
   jogando: number;
+  jogaremos: number;
   finalizado: number;
   visitado: number;
   estocado: number;
@@ -108,6 +109,7 @@ export function computeCounts(games: Game[]): GameCounts {
   const counts: GameCounts = {
     total: games.length,
     jogando: 0,
+    jogaremos: 0,
     finalizado: 0,
     visitado: 0,
     estocado: 0,
@@ -156,6 +158,7 @@ export function computeYearlyStats(games: Game[]): YearStat[] {
         hours: 0,
         byStatus: {
           jogando: { count: 0, hours: 0 },
+          jogaremos: { count: 0, hours: 0 },
           finalizado: { count: 0, hours: 0 },
           visitado: { count: 0, hours: 0 },
           estocado: { count: 0, hours: 0 },

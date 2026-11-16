@@ -14,6 +14,7 @@ import { GameList } from './components/GameList';
 import { Pagination } from './components/Pagination';
 import { StatsPanel } from './components/StatsPanel';
 import { TopGames } from './components/TopGames';
+import { UpcomingShelf } from './components/UpcomingShelf';
 
 const PAGE_SIZE = 8;
 
@@ -28,6 +29,10 @@ function App() {
   const counts = useMemo(() => computeCounts(GAMES), []);
   const currentGame = useMemo(
     () => GAMES.find((g) => g.status === 'jogando') ?? null,
+    []
+  );
+  const upcomingGames = useMemo(
+    () => GAMES.filter((g) => g.status === 'jogaremos'),
     []
   );
 
@@ -77,6 +82,11 @@ function App() {
         {/* ---------- Current game ---------- */}
         <div className="mt-5 sm:mt-6">
           <CurrentGameBanner game={currentGame} />
+        </div>
+
+        {/* ---------- Upcoming games ---------- */}
+        <div className="mt-4 sm:mt-5">
+          <UpcomingShelf games={upcomingGames} />
         </div>
 
         {/* ---------- Filters ---------- */}

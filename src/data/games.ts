@@ -17,9 +17,10 @@
 //  ═══════════════════════════════════════════════════════════════════════
 //  COMO ALTERAR O STATUS DE UM JOGO
 //  ═══════════════════════════════════════════════════════════════════════
-//  Encontre o jogo, troque o campo "status" por um destes 5 valores:
+//  Encontre o jogo, troque o campo "status" por um destes 6 valores:
 //
 //     "jogando"      → Está jogando agora
+//     "jogaremos"    → Programado para as próximas lives (aparece em Próximos jogos)
 //     "finalizado"   → Zerou / completou
 //     "visitado"     → Jogou um pouco mas não dedicou
 //     "estocado"     → Na fila (backlog), ainda não começou
@@ -32,11 +33,15 @@
 //  title         texto     título completo do jogo
 //  cover         texto     link (URL) da capa em formato caixa (retrato ~3:4)
 //  releaseDate   texto     data de lançamento "AAAA-MM-DD" (ex: 2022-02-25)
-//  status        texto     um dos 5 status acima
+//  status        texto     um dos 6 status acima
 //  hoursPlayed   número    total de horas jogadas
 //  playMinutes   número    minutos extras (0-59). Opcional, padrão 0.
 //  playSeconds   número    segundos extras (0-59). Opcional, padrão 0.
 //                             → o tempo aparece como "Xh Ym Zs" no card
+//  howLongToBeat número    tempo da história principal (Main Story) no site
+//                             howlongtobeat.com, em horas. Ex: 12, ou 8.5 para 8½.
+//                             → aparece como caixinha "HowLongToBeat 12h" no card
+//                             → deixe sem o campo para esconder a caixinha
 //  studio        texto     nome da desenvolvedora / estúdio, igual ao cadastrado em
 //                             src/data/studios.ts (logo e link vêm de lá).
 //                             → mais de uma: separe por vírgula, ex: "Ubisoft, Capcom"
@@ -81,7 +86,7 @@
 //                             → deixe sem o campo (ou string vazia) para esconder
 // ============================================================================
 
-export type GameStatus = 'jogando' | 'finalizado' | 'visitado' | 'estocado' | 'adiado';
+export type GameStatus = 'jogando' | 'jogaremos' | 'finalizado' | 'visitado' | 'estocado' | 'adiado';
 
 export type GameDifficulty =
   | 'muito-facil'
@@ -112,6 +117,7 @@ export interface Game {
   hoursPlayed: number;
   playMinutes?: number;
   playSeconds?: number;
+  howLongToBeat?: number;
   studio: string;
   genres: string[];
   startDate: string;
@@ -131,6 +137,24 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'grand-theft-auto',
+    title: "Grand Theft Auto",
+    cover: 'https://howlongtobeat.com/games/4058_Grand_Theft_Auto.jpg?width=250',
+    releaseDate: '1998-02-29',
+    status: 'jogaremos',
+    hoursPlayed: 0,
+    howLongToBeat: 13,
+    studio: "Rockstar Games",
+    genres: ["Top-Down", "Ação", "Mundo Aberto"],
+    startDate: '2026-11-14',
+    endDate: '',
+    rating: 0,
+    difficulty: 'medio',
+    platforms: [],
+    playedOn: ["PS1"],
+    recomendadoPor: "felis",
+  },
+  {
     id: 'portal-2',
     title: "Portal 2",
     cover: 'https://howlongtobeat.com/games/Portal2cover.jpg?width=250',
@@ -138,6 +162,7 @@ export const GAMES: Game[] = [
     status: 'jogando',
     hoursPlayed: 3,
     playMinutes: 0,
+    howLongToBeat: 8,
     studio: "Valve",
     genres: ["Primeira Pessoa", "Puzzle", "Platform", "Boa Trama"],
     startDate: '2026-11-14',
@@ -156,6 +181,7 @@ export const GAMES: Game[] = [
     status: 'finalizado',
     hoursPlayed: 1,
     playMinutes: 54,
+    howLongToBeat: 3,
     studio: "Gone North Games",
     genres: ["Primeira Pessoa", "Adventura", "Plataforma", "Boa Trama"],
     startDate: '2026-10-22',
@@ -173,6 +199,7 @@ export const GAMES: Game[] = [
     releaseDate: '2007-10-10',
     status: 'finalizado',
     hoursPlayed: 2,
+    howLongToBeat: 3,
     studio: "Valve",
     genres: ["Primeira Pessoa", "Puzzle", "Platform", "Boa Trama"],
     startDate: '2026-10-17',
@@ -190,6 +217,7 @@ export const GAMES: Game[] = [
     releaseDate: '2018-06-13',
     status: 'visitado',
     hoursPlayed: 2,
+    howLongToBeat: 25,
     studio: "Frontier Developments",
     genres: ["Simulation", "Estratégia", "Point and Click", "Real-Time"],
     startDate: '2026-10-04',
@@ -207,6 +235,7 @@ export const GAMES: Game[] = [
     releaseDate: '2003-03-13',
     status: 'finalizado',
     hoursPlayed: 4,
+    howLongToBeat: 9,
     studio: "Blue Tongue Entertainment",
     genres: ["Simulation", "Estratégia", "Point and Click", "Real-Time"],
     startDate: '2026-09-30',
@@ -224,6 +253,7 @@ export const GAMES: Game[] = [
     releaseDate: '2014-11-19',
     status: 'finalizado',
     hoursPlayed: 7,
+    howLongToBeat: 18,
     studio: "Ubisoft",
     genres: ["Primeira Pessoa", "Aventura", "Shooter", "Mundo Aberto"],
     startDate: '2026-09-25',
@@ -242,6 +272,7 @@ export const GAMES: Game[] = [
     status: 'visitado',
     hoursPlayed: 1,
     playMinutes: 36,
+    howLongToBeat: 10,
     studio: "Dumativa Game Studio",
     genres: ["2D Platformer", "Aventura", "Indie", "Soundtrack"],
     startDate: '2026-09-13',
@@ -260,6 +291,7 @@ export const GAMES: Game[] = [
     status: 'adiado',
     hoursPlayed: 10,
     playMinutes: 40,
+    howLongToBeat: 15,
     studio: "Lionhead Studios, Big Blue Box, Robosoft",
     genres: ["Ação", "Aventura", "RPG", "Estratégia"],
     startDate: '2026-08-16',
@@ -273,34 +305,33 @@ export const GAMES: Game[] = [
   {
     id: 'punch-club',
     title: "Punch Club",
-    cover: 'https://howlongtobeat.com/games/Punch_Club_header.jpg?width=250',
-    releaseDate: '2016-01-09',
+    cover: '',
+    releaseDate: '2016-01-01',
     status: 'visitado',
     hoursPlayed: 1,
     studio: "tinyBuild",
     genres: ["Estratégia", "RPG"],
-    startDate: '2026-08-11',
-    endDate: '2026-08-11',
+    startDate: '2026-08-10',
+    endDate: '2026-08-10',
     rating: 8,
-    difficulty: 'medio',
-    platforms: [{ name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/394310/Punch_Club/' }, { name: 'Xbox', icon: 'xbox', url: 'https://www.xbox.com/pt-BR/games/store/punch-club/bs1v82fltgkj' }, { name: 'PlayStation', icon: 'playstation', url: 'https://store.playstation.com/pt-br/product/UP0097-CUSA05470_00-PUNCHCLUB0000000' }, { name: 'Nintendo', icon: 'nintendo', url: 'https://www.nintendo.com/pt-br/store/products/punch-club-switch/' }],
+    difficulty: 'muito-dificil',
+    platforms: [{ name: 'Steam', icon: 'steam', url: '' }, { name: 'Xbox', icon: 'xbox', url: '' }, { name: 'PlayStation', icon: 'playstation', url: '' }, { name: 'Nintendo', icon: 'nintendo', url: '' }],
     playedOn: ["PC"],
     recomendadoPor: "felis",
   },
   {
     id: 'ratatouille',
     title: "Ratatouille",
-    cover: 'https://howlongtobeat.com/games/7584_Ratatouille.png?width=250',
-    releaseDate: '2007-07-27',
+    cover: '',
+    releaseDate: '2007-01-01',
     status: 'estocado',
-    hoursPlayed: 4,
+    hoursPlayed: 0,
     studio: "Heavy Iron, Asobo Studio, Helixe",
     genres: ["Ação", "Aventura", "Quebra-Cabeça"],
-    startDate: '2026-08-07',
-    endDate: '2026-08-09',
-    rating: 8,
-    difficulty: 'medio',
-    platforms: [],
+    startDate: '2026-08-04',
+    endDate: null,
+    rating: 0,
+    platforms: [{ name: 'Steam', icon: 'steam', url: '' }, { name: 'Xbox', icon: 'xbox', url: '' }, { name: 'PlayStation', icon: 'playstation', url: '' }, { name: 'Nintendo', icon: 'nintendo', url: '' }],
     playedOn: ["PS2"],
     recomendadoPor: "felis",
   },
@@ -3610,6 +3641,7 @@ export const GAMES: Game[] = [
     hoursPlayed: 11,
     playMinutes: 40,
     playSeconds: 10,
+    howLongToBeat: 19,
     studio: "Dimps",
     genres: ["Ação", "Aventura", "Luta"],
     startDate: '2026-09-06',

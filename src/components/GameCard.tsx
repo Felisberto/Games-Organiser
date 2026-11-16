@@ -8,6 +8,7 @@ import { StatusBadge } from './StatusBadge';
 import { Rating } from './Rating';
 import { PlatformLinks } from './PlatformLinks';
 import { DifficultyBadge } from './DifficultyBadge';
+import { HowLongToBeatBox } from './HowLongToBeatBox';
 
 interface GameCardProps {
   game: Game;
@@ -101,6 +102,9 @@ export function GameCard({ game, index }: GameCardProps) {
               Tempo Jogado
             </p>
             <StatusBadge status={game.status} />
+            {game.howLongToBeat && game.howLongToBeat > 0 && (
+              <HowLongToBeatBox hours={game.howLongToBeat} />
+            )}
           </div>
         </div>
 
