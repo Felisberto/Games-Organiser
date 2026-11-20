@@ -137,6 +137,24 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'the-legend-of-zelda-ocarina-of-time',
+    title: "The Legend of Zelda: Ocarina of Time (1998)",
+    cover: 'https://howlongtobeat.com/games/10035_The_Legend_of_Zelda_Ocarina_of_Time.png?width=250',
+    releaseDate: '1998-11-21',
+    status: 'jogaremos',
+    hoursPlayed: 0,
+    howLongToBeat: 27,
+    studio: "Nintendo",
+    genres: ["Action", "Adventure", "Third-Person", "Fantasy"],
+    startDate: '2026-12-26',
+    endDate: '',
+    rating: 0,
+    difficulty: 'medio',
+    platforms: [],
+    playedOn: ["N64"],
+    recomendadoPor: "felis",
+  },
+  {
     id: 'the-last-of-us',
     title: "The Last of Us",
     cover: 'https://howlongtobeat.com/games/9997_The_Last_of_Us.jpg?width=250',
