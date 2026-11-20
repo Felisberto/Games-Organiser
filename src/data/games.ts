@@ -137,6 +137,24 @@ export interface Game {
 
 export const GAMES: Game[] = [
   {
+    id: 'dont-starve',
+    title: "Don't Starve",
+    cover: 'https://howlongtobeat.com/games/2675_Dont_Starve.jpg?width=250',
+    releaseDate: '2013-04-24',
+    status: 'visitado',
+    hoursPlayed: 1,
+    howLongToBeat: 28,
+    studio: "Klei Entertainment",
+    genres: ["Sobrevivencia", "Roguelike", "Sandbox", "Ação-Aventura"],
+    startDate: '2026-11-20',
+    endDate: '2026-11-20',
+    rating: 10,
+    difficulty: 'medio',
+    platforms: [{ name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/219740/Dont_Starve/' }, { name: 'Xbox', icon: 'xbox', url: 'https://www.xbox.com/pt-BR/games/store/dont-starve-giant-edition/C0XBNVR137DZ' }, {name: "PlayStation", icon: "playstation", url: "https://www.playstation.com/pt-br/games/dont-starve-console-edition/" }, {name: 'Nintendo', icon: 'nintendo', url: 'https://www.nintendo.com/pt-br/store/products/dont-starve-nintendo-switch-edition-switch/' }],
+    playedOn: ["PC"],
+    recomendadoPor: "felis",
+  },
+  {
     id: 'grand-theft-auto',
     title: "Grand Theft Auto",
     cover: 'https://howlongtobeat.com/games/4058_Grand_Theft_Auto.jpg?width=250',
