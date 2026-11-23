@@ -169,8 +169,8 @@ export const GAMES: Game[] = [
     endDate: '',
     rating: 0,
     difficulty: 'medio',
-    platforms: [],
-    playedOn: ["PS4"],
+    platforms: [{name: 'Steam', icon: 'steam', url: 'https://store.steampowered.com/app/1888930/'}, {name: 'PlayStation', icon: 'playstation', url: 'https://store.playstation.com/pt-br/product/UP9000-PPSA03396_00-THELASTOFUSPART1'}],
+    playedOn: ["PC"],
     recomendadoPor: "felis",
   },
   {
