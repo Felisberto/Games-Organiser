@@ -178,7 +178,7 @@ export const GAMES: Game[] = [
     title: "The Binding of Isaac",
     cover: 'https://howlongtobeat.com/games/TheBindingofIsaac_292x136.jpg?width=250',
     releaseDate: '2011-08-28',
-    status: 'jogaremos',
+    status: 'visitado',
     hoursPlayed: 0,
     playMinutes: 11,
     howLongToBeat: 11,
